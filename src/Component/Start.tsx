@@ -49,7 +49,7 @@ const Start = (props: Props) => {
     }
     redirectPage()
     
-  }, [Difficult, numberOfQuestions, props.pageredirect, history]);
+  }, [Difficult, numberOfQuestions, props.pageredirect,location.state, history]);
   
   const handleClick = (e: string) => {
     switch (e) {
