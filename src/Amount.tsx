@@ -9,9 +9,9 @@ const Amount = () => {
     <Start
       pageredirect="/question"
       header="Select Number Of Questions"
-      option1="3"
-      option2="5"
-      option3="10"
+      option1='3'
+      option2='5'
+      option3='10'
     />
   );
 };

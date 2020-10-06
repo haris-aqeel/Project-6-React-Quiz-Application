@@ -7,9 +7,9 @@ const SelectDifficulty = () => {
     <Start
       pageredirect="/amount"
       header="Select Difficulty"
-      option1="easy"
-      option2="medium"
-      option3="hard"
+      option1='easy'
+      option2='medium'
+      option3='hard'
     />
   );
 };
