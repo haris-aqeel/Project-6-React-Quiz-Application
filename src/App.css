@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.level__Header{
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.LevelSelection{
+    max-width: 400px;
+    min-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: #efefef;
+}
+
+.Button{
+    margin: 10px 0px;
+}
+
