@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import Photo from "../logo.svg";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { QuestionProps } from "../Types/types";
-import { withStyles , makeStyles} from '@material-ui/core/styles';
-import { green } from '@material-ui/core/colors';
+import { makeStyles} from '@material-ui/core/styles';
 import Radio from '@material-ui/core/Radio';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
-import Result from '../Result'
 import {useHistory} from 'react-router-dom'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const useStyles = makeStyles({
   root: {
     width: 300,
   },
 });
-
+   
 const QuestionCard = ({question,correct_answer,callback, options, amount}: QuestionProps) => {
 
   const [Value, setValue] = useState<string>();
@@ -23,19 +23,19 @@ const QuestionCard = ({question,correct_answer,callback, options, amount}: Quest
   const classes = useStyles();
   let history = useHistory();
 
-  const evaluateResult =() =>{
-    if (total<= +amount){
+  const evaluateResult =(): void =>{
+    if (total<amount){
     settotal(total+1)    
+    
     if (correct_answer === Value) {
       setCounter(counter+1)
+      setValue("")
     }}else{
-
-      
       history.push({
           pathname: '/result',
           state: {
-            total: total,
-            amount: +amount
+            counter: counter,
+            amount: amount
           }
         })
     }
@@ -64,7 +64,11 @@ const QuestionCard = ({question,correct_answer,callback, options, amount}: Quest
         <div className='display_Score'>
           Score: {counter}
         </div>
+        <div 
+        >
+
         <img src={Photo} width="50%" className="Photo__Illustration" />
+        </div>
       </div>
 
       <div className="col col-12 col-sm-12 col-lg-6 col-md-6 QuestionTemplate">
@@ -87,14 +91,25 @@ const QuestionCard = ({question,correct_answer,callback, options, amount}: Quest
                 </li>
               );
             })}
-            <button type="submit" onClick={evaluateResult} className='submit_Button'>
-              {total < +amount ?  "Next Question": "Submit" }
-            </button>
+
+              {total < amount ?  
+
+                <button type="submit" onClick={evaluateResult} className='submit_Button'>
+                      Next Question        
+                </button> 
+              
+              : 
+              <button type="submit" onClick={evaluateResult} className='submit_Button'>
+                      Submit
+                </button> }
+            
           </ul>
         </form>
       </div>
     </div>
   );
 };
+
+AOS.init();
 
 export default QuestionCard;

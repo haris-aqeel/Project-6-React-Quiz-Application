@@ -119,6 +119,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
@@ -133,6 +134,7 @@
     justify-content: space-around;
     flex-direction: column;
     box-shadow: 1px 1px 44px  rgb(65, 62, 62);
+    margin-bottom: 100px;
     
 }
 
@@ -142,3 +144,10 @@
     color: #fff;
 }
 
+.Loader{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}

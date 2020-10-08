@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route, Link} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import SelectDifficulty from './SelectDifficulty';
 import Amount from './Amount';
 import Question from './Question';

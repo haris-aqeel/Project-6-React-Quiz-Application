@@ -37,7 +37,7 @@ export type MouseHandler = React.MouseEvent<HTMLButtonElement>;
 
   export type finalLocation = {
     state: {
-      total: number;
+      counter: number;
       amount: number;
     }
   }
