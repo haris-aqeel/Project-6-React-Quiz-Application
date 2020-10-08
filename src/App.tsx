@@ -4,7 +4,7 @@ import {Route, Link} from 'react-router-dom';
 import SelectDifficulty from './SelectDifficulty';
 import Amount from './Amount';
 import Question from './Question';
-
+import Result from './Result'
 
 function App() {
 
@@ -20,6 +20,9 @@ function App() {
       </Route>
       <Route exact path='/question'> 
           <Question />
+      </Route>
+      <Route exact path='/result'> 
+          <Result />
       </Route>
 
     </div>

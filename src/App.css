@@ -35,13 +35,19 @@
     height: 100vh;
 }
 
+.display_Score{
+    font-size: 22px;
+    font-weight: 400;
+}
 
 .QuestionIllustration{
     margin-top: 40px;
     text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    height: inherit;
     
 }
 
@@ -52,11 +58,9 @@
 .QuestionTemplate{
     max-width: 400px;
     min-width: 360px;
-    margin: 0 auto;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
     background-color: #efefef;
@@ -71,16 +75,70 @@
 .option_number{
     font-size: 20px;
     font-family: 'Sansita Swashed', cursive;
-    background-color: #5a5959;
     width: 100%;
     padding: 10px;
 }
 
 .option_Each{
-    
+    text-decoration: none;
+    text-align: center;
 }
 
 .Options{
-    width: 100%;
-    margin-top: 200px;
+    list-style: none;
 }
+
+.submit_Button{
+    width: 200px;
+    margin-left: 38px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 4px;
+    color: #3c32ff;
+    border: 1px solid #3c32ff;
+    font-weight: 600;
+    outline: none;
+    transition: .4s ease-in-out
+    
+}
+.submit_Button:active, .submit_Button:visited, .submit_Button:focus{
+    border: 1px solid #3c32ff;
+    outline: none;
+}
+.submit_Button:hover{
+    background-color: #3c32ff;
+    color: #fff;
+     outline: none;
+}
+
+.Result{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.ResultBox{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(65, 62, 62);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-around;
+    flex-direction: column;
+    box-shadow: 1px 1px 44px  rgb(65, 62, 62);
+    
+}
+
+.ResultBox span{
+    font-size: large;
+    font-weight: 780;
+    color: #fff;
+}
+

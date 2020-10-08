@@ -2,28 +2,20 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import { useLocation } from "react-router-dom";
+import {OptionProps} from '../Types/types'
+import {Location} from '../Types/types'
+import {MouseHandler} from '../Types/types'
 
 let yes: boolean = true;
-type Props = {
-  pageredirect: string;
-  header: string;
-  option1: string;
-  option2: string;
-  option3: string;
-};
 
-const Start = (props: Props) => {
+
+const Start = (props: OptionProps) => {
   
-  const [Difficult, setDifficult] = useState("");
-  const [numberOfQuestions, setnumberOfQuestions] = useState("");
-  type Location = {
-    state: {
-      level: string;
-      amount: string;
-    }
-  }
+  const [Difficult, setDifficult] = useState<string>("");
+  const [numberOfQuestions, setnumberOfQuestions] = useState<string>("");
+  
 
-  type MouseHandler = React.MouseEvent<HTMLButtonElement>;
+  
   const location:Location = useLocation();
   let history = useHistory();
 
